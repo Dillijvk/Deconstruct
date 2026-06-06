@@ -1,0 +1,86 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  border: 1px solid #e5e5e5;
+  padding: 15px;
+  background: #fff;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.offer-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #111;
+  color: white;
+  padding: 8px 15px;
+  font-weight: bold;
+}
+
+.card-img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+}
+
+.card-title {
+  font-size: 18px;
+  margin: 15px 0;
+  min-height: 50px;
+}
+
+.price-box {
+  margin: 15px 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  margin-right: 10px;
+}
+
+.new-price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.rating {
+  margin: 15px 0;
+  color: #ff9800;
+}
+
+.cart-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #111;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  background: #333;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-img {
+    height: 280px;
+  }
+}

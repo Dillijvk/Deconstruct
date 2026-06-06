@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bruno+Ace+SC&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&family=Share+Tech&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+* {
+  font-family: "Share Tech", "Playwrite GB J", "Bebas Neue", sans-serif;
+  font-weight: 500;
+}
+
+.slider-text{
+   font-family: "Bruno Ace SC", sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+   color:black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color:lightgray;
+  width: 99%;
+  margin: 5px auto;
+  border-radius: 10px;
+}
+
+@media (min-width:768px){
+  .navbar{
+     width: 60%;
+     
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 4rem;
+  text-decoration: none;
+  padding: 15px;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 4px;
+  width: 0;
+  background: black;
+  border-radius: 50px;
+  transition: width 0.4s ease;
+}
+a:hover:before {
+  width: 100%;
+}
+
+.cart-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: black;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktop-img {
+  display: block;
+  width: 100%;
+}
+
+.mobile-img {
+  display: none;
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: block;
+  }
+}
